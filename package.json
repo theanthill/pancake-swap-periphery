@@ -1,5 +1,5 @@
 {
-  "name": "pancakeswap-peripheral",
+  "name": "@theanthill/pancake-swap-periphery",
   "version": "1.1.0-beta.0",
   "description": "🎚 Peripheral smart contracts for interacting with pancake",
   "engines": {
@@ -15,6 +15,7 @@
     "contracts"
   ],
   "dependencies": {
+    "@pancakeswap2/pancake-swap-core": "^0.1.0",
     "@uniswap/lib": "1.1.1",
     "@uniswap/v2-core": "^1.0.1",
     "truffle-hdwallet-provider": "^1.0.17",
@@ -43,8 +44,7 @@
     "compile": "waffle .waffle.json",
     "postcompile": "yarn copy-v1-artifacts",
     "pretest": "yarn compile",
-    "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "test": "mocha"
   },
   "license": "GPL-3.0-or-later"
 }
